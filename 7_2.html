@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_2</title>
+    <style>
+        p:first-child {
+            color: blue;
+            font-weight: bold;
+        }
+
+        p:first-of-type {
+            background: yellow;
+        }
+
+        :in-range {
+            color: green;
+            font-weight: bold;
+        }
+
+        :out-of-range {
+            color: red;
+            font-weight: bold;
+
+        }
+
+        :target {
+            border: 2px solid #D4D4D4;
+            background-color: #e5eecc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>pesudo clsases and elements</h1>
+    <span>Ha egy elem megjelenik a böngészőben, akkor ahhoz a böngésző már automatikusan rendel pseudo class-okat
+        (pl.:first-child, :enabled). Ha változik egy elem állapota akkor további pseudo classokat ad hozzá a
+        böngésző.</span>
+    <main>
+        <h2>:first-child vs. :first-of-type</h2>
+        <span>Hic placeat suscipit assumenda nulla consequatur.</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A harum mollitia fugiat deserunt voluptas nemo
+            culpa. Hic placeat suscipit assumenda nulla consequatur. Ipsa repellendus similique cupiditate unde
+            dignissimos architecto rem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus possimus soluta, dignissimos natus dicta
+            necessitatibus. Mollitia tenetur repudiandae, quam nam, alias maxime neque tempore impedit laudantium hic
+            reiciendis! Maxime, nulla.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique inventore eveniet iure ipsum, accusamus,
+            odio tempora error nisi assumenda dolor nostrum libero ipsam. Eum commodi pariatur dolorem velit deserunt
+            libero!</p>
+        <div>
+            <p>Hic placeat suscipit assumenda nulla consequatur.</p>
+            <p>Hic placeat suscipit assumenda nulla consequatur.</p>
+            <p>Hic placeat suscipit assumenda nulla consequatur.</p>
+        </div>
+
+        <h2>:focus, web accessibility(focus control) </h2>
+        <a href="">Link</a>
+        <input type="text">
+        <button>button</button>
+        <p contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae modi quaerat, ad
+            excepturi mollitia animi ab consequuntur ducimus perspiciatis voluptatum, voluptates, praesentium adipisci
+            temporibus dolores asperiores facere quae cumque natus.</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li><a href="">333</a>
+                <ul>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>:in-range, :out-of-range</h2>
+        <p>with input type number or date</p>
+        <input type="number" name="" id="" min="2" max="5">
+        <input type="date" name="" id="" min="2023-02-01" max="2023-02-10">
+
+        <h2>some other</h2>
+        <ul>
+            <li>:nth-last-child(), it counts backward</li>
+            <li><b>they explain themselves(from the viewpoint of any parent element)</b>
+                <ul>
+                    <li>:nth-of-type(), </li>
+                    <li>:nth-last-of-type()</li>
+                    <li>:only-of-type </li>
+                    <li>:only-child</li>
+                </ul>
+            </li>
+            <li>:require, :optional</li>
+            <li>:read-only, :read-write</li>
+            <li>:target ()</li>
+        </ul>
+
+        <h2>:target</h2>
+        <p>URLs with an # followed by an anchor name link to a certain element within a document. The element being linked to is the target element. The :target selector can be used to style the current active target element.</p>
+        <p><a href="#news1">Jump to content 1</a></p>
+        <p><a href="#news2">Jump to content 2</a></p>
+        <p>Click on the links above and the :target selector highlight the current active HTML anchor.</p>
+
+        <h4 id="news1"><b> content 1...</b></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit provident, delectus quibusdam adipisci odit culpa ab itaque nobis ullam eos qui earum fugit molestiae, beatae aut optio similique sunt mollitia!</p>
+        <h4 id="news2"><b> content 2...</b></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quia suscipit aut aperiam pariatur ducimus consequuntur praesentium delectus, aliquid ut neque enim cumque rem impedit aspernatur, eum expedita consectetur earum.</p>
+
+        <h2>and the whole list</h2>
+        <p>all pseudo classes and elements: <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">here</a></p>
+
+        <h2>and more</h2>
+        <p>:indeterminate with checkboxes, in bootstrap with js - <a href="https://getbootstrap.com/docs/5.3/forms/checks-radios/">here</a></p>
+
+    </main>
+</body>
+
+</html>

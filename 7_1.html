@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_1 css</title>
+    <style>
+        [title] {
+            border: 3px solid green;
+        }
+
+        [title="sample"] {
+            color: blue;
+        }
+        div[title="sample"] {
+            width: 300px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectors</h1>
+    <h2>tag name, id, class, attribute selector, combined selector</h2>
+    <p>Fontos a hivatkozás formaisága: minél specifikusabb egy elem hivatkozása css-ben annál nagyobb a css szabály prioritása.</p>
+    <p>Elemek megszólítása, szűrése attribútum szelektorokkak:</p>
+    <p title="sample">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eum fugit asperiores magnam suscipit? Fugit porro officiis dolore, corrupti reprehenderit est nulla adipisci velit labore nam aliquam saepe sint vitae!</p>
+    <p title="sample2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque fugiat totam earum ab placeat temporibus ipsa perferendis, aperiam delectus reprehenderit nobis laborum perspiciatis eius ipsam at voluptate necessitatibus, ea accusantium?</p>
+    <div title="sample">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus natus voluptatem alias ipsum? Ipsa ea perferendis aut nihil, porro similique officiis accusantium repudiandae dolorem et aspernatur, deserunt minus nobis.</div>
+    <h2>pseudo selectors</h2>
+    <p>A böngésző rendeli az egyes elemekhez az elem tulajdonságaitól függően. 
+        Tulajdonság pl.: readonly, hover, focus, nth-child(), empty stb.
+    </p>
+
+</body>
+</html> 
