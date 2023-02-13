@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 10px;
+        }
+        h1,
+        h2,
+        h3 {
+            margin: 10px 0;
+        }
+
+        #border {
+            border: 1px solid red;
+        }
+
+        .m>div {
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+
+        .m>div:first-child {
+            margin: 10px;
+        }
+
+        .m>div:last-child {
+            margin: 10px;
+        }
+
+        .m:not(:first-of-type)>div {
+            float: left;
+        }
+
+        .clearfix {
+            display: table;
+            content: "";
+            clear: both;
+        }
+
+        #outline {
+            outline: 1px dashed red;
+            outline-offset: 10px;
+            background: yellow;
+            border: 1px solid blue;
+            /* margin: 15px; */
+        }
+
+        /* vertival-align: */
+        img.a {
+            vertical-align: baseline;
+        }
+
+        img.b {
+            vertical-align: text-top;
+        }
+
+        img.c {
+            vertical-align: text-bottom;
+        }
+
+        img.d {
+            vertical-align: sub;
+        }
+
+        img.e {
+            vertical-align: super;
+        }
+        #spaces{
+            width: 400px;
+            height: 50px;
+            background-color: aqua;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Border, outline, text formatting</h1>
+    <h2>border</h2>
+    <p id="border">Shorthand property: with, type, color. The sequence is indifferent. One compulsory element is type,
+        the other two is optional.</p>
+    <h2>margin</h2>
+    <p>can be used only on block elements.</p>
+    <p>auto can be used only if width is defined.</p>
+    <p>shorthand property ...(eg. margin { top leftRight bottom })</p>
+    <p>Absolute values: <a href="https://www.w3.org/Style/Examples/007/units.en.html#units">px, pt, cm, in ...</a>
+        Relative values: %, vw, vh</p>
+    <p>If property value is given in %, it refers to the WIDTH of the parent element.</p>
+    <p></p>
+    <p>vertical margins overlap:</p>
+    <div class="m">
+        <div></div>
+        <div></div>
+    </div>
+    <p>horitontal margins does not overlap</p>
+    <div class="m">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="clearfix"></div>
+    <h2>padding</h2>
+    <p>similar to margin</p>
+
+    <h2>dimensions</h2>
+    <p>max-width, max-height, min-width, min-height: If the width or height is defined in %, max-width, max-height,
+        min-width, min-height can define a maximum or minimum value for eg. a picture to avoide too small or too large
+        size (ugly pic)</p>
+
+    <h2>box-model</h2>
+    <p>... border-box</p>
+
+    <h2>outline</h2>
+    <p>It is a shorthand property (width, style, color). It is out of the border.</p>
+    <p id="outline">Any element can have an outline. Difference between outline and border: outline does not takes any
+        place, it "floats" over anything. If you don't want outline to overlap any elements give larger margin to the
+        element than outline-offset value.</p>
+    <p>outline-offset: CSS property sets the amount of space between an outline and the edge or border of an element.
+    </p>
+
+    <h2>Text-formatting</h2>
+    <h3>Color</h3>
+    <p>....</p>
+    <h3>text-align</h3>
+    <p>It works on inline elements in block elements.</p>
+    <p>justified is not recommended.</p>
+    <p>text-align-last: defines the align of the last row. Not really good (resposivity). Do not use it.</p>
+
+    <h3>vertical-align</h3>
+    <p>You can position icons in a text with it.</p>
+    <p>These are 
+        <img class="a" src="https://icons.iconarchive.com/icons/ampeross/qetto/16/css-icon.png" width="9" height="9">
+        <img class="b" src="https://icons.iconarchive.com/icons/ampeross/qetto/16/css-icon.png" width="9" height="9">
+        <img class="c" src="https://icons.iconarchive.com/icons/ampeross/qetto/16/css-icon.png" width="9" height="9">
+        <img class="d" src="https://icons.iconarchive.com/icons/ampeross/qetto/16/css-icon.png" width="9" height="9">
+        <img class="e" src="https://icons.iconarchive.com/icons/ampeross/qetto/16/css-icon.png" width="9" height="9">
+        images with vertical alignment.
+    </p>
+    <p>You can use it with font awesome iscons.</p>
+
+    <h3>text-decoration</h3>
+    <p>text-decoration- ... line, color, style, thickness</p>
+    <p>shorthand: text-decoration</p>
+    <p>Do nor remove the underline from links because of web accessibility ...</p>
+    <p>text-decoration-line: overline, line-through, underline. You can use all in the same definition.</p>
+    <p>text-decoration-style: solid, dotted, doubled, dashed, wavy</p> 
+    <p>text-decoration-thickness: px or % of the letter size, auto</p> 
+
+    <h3>text-transform</h3>
+    <p>uppercase, lowercase, titlecase, capitalize</p>
+    <p>font-variant: small-caps --> All is uppercase but the first letters of the sentences are larger.</p>
+
+    <h3>spaces</h3>
+    <p>text-indent, letter-spacing, line-height, word-spacing, white-space</p>
+    <p>if the container boxes sizes are fixed and we have texts with different length we can use the next trick (white-space: nowrap; overflow: hidden; text-overflow: ellipsis;). For desktops you can add the whole text in title attr. so it will be available this way:</p>
+    <p id="spaces" title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus doloribus quis laudantium sapiente repudiandae.">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus doloribus quis laudantium sapiente repudiandae.</p>
+
+</body>
+
+</html>
