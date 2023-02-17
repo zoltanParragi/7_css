@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_5</title>
+    <style>
+        ul {
+            list-style-type: lower-greek;
+        }
+        li {
+            background:yellow;
+        }
+        ul:nth-of-type(2) {
+            list-style-position: inside;
+        }
+        .relative1 {
+            width: 200px;
+            height: 150px;
+            background: red;
+        }
+        .relative2 {
+            width: 200px;
+            height: 150px;
+            background: yellow;
+            position: relative;
+            top: -100px;
+            left: 50px;
+        }
+        .relative3 {
+            width: 200px;
+            height: 150px;
+            background: red;
+            margin-bottom: 100px;
+        }
+        .relative4 {
+            width: 200px;
+            height: 150px;
+            background: yellow;
+            position: relative;
+            top: -100px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>fonts, icons, list items, table, display, position</h1>
+    <h2>fonts</h2>
+    <p>font-families: serif(old fahsioned), sans-serif(newer), monospace, cursive(hand writing), fantasy </p>
+    <p>font-styles: normal, italic = oblique</p>
+    <p>font-weight: ...</p>
+    <p>font-variant: normal, small-caps</p>
+    <p>font-size: absolute (px, in, cm, ...), relative (rem, em, %, vh, vw, ...) </p>
+    <p>em: Relative to the font-size of the parent element (2em means 2 times the size of the current font). It is also usable for padding, margin, width, height, max-width,… <b>!Remember: when em units are used on font-size, the size is relative to the font-size of the parent. When used on other properties, it’s relative to the font-size of the element itself.</b> Problem: compoundin effect: <a href="https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units"></a> </p>
+    <p>rem: Relative to font-size of the root element (default: 16px)</p>
+
+    <h2>icons</h2>
+    <p>utf-8 characters (eg. html entities) or svg files. Icon providers: font awesome, bootstrap(better, no unpleasant updates). Can be made by yourself.</p>
+    <p>html emoji reference: <a href="https://www.w3schools.com/charsets/ref_emoji.asp">here</a> . And emoji skin tones: <a href="https://www.w3schools.com/charsets/ref_emoji_skin_tones.asp">here</a></p>
+    <p>eg.: traffic lights - &#x1F6A6; and a larger one - <span style='font-size:100px;'>&#128678;</span></p>
+    <p>and skin tones: <span>&#9757; No skin tone</span>
+    <span>&#9757;&#127999; Dark</span>
+    <span>&#9757;&#127998; Medium Dark</span>
+    <span>&#9757;&#127997; Medium</span>
+    <span>&#9757;&#127996; Medium Light</span>
+    <span>&#9757;&#127995; Light</span></p>
+
+    <h2>list items</h2>
+    <p>list-style-type (list-style-image), list-style-position(outside, inside), </p>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+    <p>You can crate different menus, navbars with the use of ul. Even submenus in a menu.</p>
+
+    <h2>table</h2>
+    <p>do not it if possible (not responsive) ...</p>
+
+    <h2>display</h2>
+    <p>block: (has dimensions)..., inline: (does not have dimensions)..., inline-block: (can have dimension)...., flex: ..., inline-flex: (flex toward its children, inline toward siblings)....</p>
+    <p>grid: <a href="https://www.w3schools.com/css/css_grid.asp">more here</a></p>
+
+    <h2>position</h2>
+    <p>static(default), relative, absolute, fixed</p>
+    <ul>
+        <li>static: it takes its natural place</li>
+        <li>relative: you can define its place (top, left, ...) relative to its natural static position</li>
+        <li>absolute: you can define its position (top, left, ...) relaive to its first positioned parent</li>
+        <li>fixed: relative to the window</li>
+    </ul>
+    <p>If you want to use <b>absolute</b> you have to add <b>relative</b> to its parent or it will position itself to the root element(body).</p>
+    <p>z-index can be used only with elements where position is set.</p>
+    <p>If you move an item upward (with negative value eg.: top: -40px) you have to add margin to to element above to keep the desired space between them.</p>
+    <p>Without margin:</p>
+    <div class="relative1"></div>
+    <div class="relative2"></div>
+    <p>(this empty space &#9757; is the natural/static space of the yellow box.)</p>
+    <p>With margin-bottom defined:</p>
+    <div class="relative3"></div>
+    <div class="relative4"></div>
+
+</body>
+</html>

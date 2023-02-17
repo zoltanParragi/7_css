@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_6</title>
+    <style>
+        .container{
+            position: relative;
+        }
+        .a, .b, .c{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+        }
+        .a{
+            background: red;
+            z-index: 5;
+        }
+        .b{
+            background: blue;
+            top: 20px;
+            left: 20px;
+        }
+        .c{
+            background: yellow;
+            top: 50px;
+            left: 50px;
+        }
+        .overflow{
+            width: 200px;
+            height: 150px;
+            background: yellow;
+            padding: 10px;
+            overflow: auto;
+        }
+        
+        .floatContainer{
+            border: 2px solid blue;
+        }
+        .separator::after{
+            display: table;
+            content:"";
+            clear: both;
+            margin: 20px 0;
+        }
+        .floatContainer2{
+            border: 2px solid green;
+            overflow: hidden;
+        }
+        .d, .e {
+            width: 100px;
+            height: 100px;
+            float: right;
+        }
+        
+        .d{
+            background: red;
+        }
+        .e{
+            background: yellow;
+        }
+        .max{
+            height: 100px;
+            width: max(50%, 400px);
+            background: red;;
+        }
+        .min{
+            height: 100px;
+            width: min(50%, 400px);
+            background: yellow;
+        }
+        .flexContainer{
+            display: flex;
+            background: red;
+            height: 400px;
+            justify-content: space-around;
+            padding: 10px;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+        .flexelement{
+            min-width: 20%;
+            height: 50px;
+            background: rgb(176, 176, 236);
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>z-index, overflow, float</h1>
+    <h2>z-index</h2>
+    <p>An elemet with higher z-index covers the elements with lower z-index or with no z-index.</p>
+    <p>z-index works only with the elements that have a <b>position</b> property (with any value).</p>
+    <div class="container">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+
+    <h2 style="margin-top: 240px;">overflow</h2>
+    <p>shorthand property</p>
+    <ul>
+        <li>visible (default)</li>
+        <li>hidden</li>
+        <li>auto (scrollbar where necessary)</li>
+        <li>scroll (x, y scrollbars)</li>
+    </ul>
+    <div class="overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita tenetur. Labore, itaque animi! Ad, esse. Veniam, autem fugit, dolorum non magni sint, repudiandae aliquid illum unde eius aperiam incidunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta fugiat id odio vitae omnis delectus mollitia, similique provident dolore veritatis tempore adipisci praesentium laboriosam, vel facere tempora possimus. Non, reiciendis?</div>
+
+    <h2>float</h2>
+    <p>Left floated elements. To avoid container element collapse use overflow:hidden or clearfix.</p>
+    <div class="floatContainer">
+        <div class="d"></div>
+        <div class="e"></div>
+    </div>
+    <div class="separator"></div>
+    <div class="floatContainer2">
+        <div class="d"></div>
+        <div class="e"></div>
+    </div>
+
+    <h2>opacity</h2>
+    <p>...</p>
+
+    <h2>important</h2>
+    <p>...</p>
+
+    <h2>css math</h2>
+    <p>max() - takes one or more comma-separated expressions as its parameter, with the largest (most positive) expression value used as the value of the property to which it is assigned</p>
+    <p>, min() 2 or more values and the min is chosen</p>
+    <p> calc()...</p>
+    <div class="max"></div>
+    <div class="min"></div>
+    <div class="calc"></div>
+
+    <h2>flexbox</h2>
+    <p>flex-wrap: wrap - elements with fix width will be placed in rows if one row is not enough. no-wrap is default</p>
+    <p>flex: 1; on flex child elements means that they will take equal width in their parent.</p>
+    <p>flex-direction: row, column, row-reverse, column-reverse</p>
+    <p>flex-flow: shorthand for flex-direction and flex-wrap</p>
+    <p>justify-content:(horizontal) flex-start, flex-end, center, space-around, space-between, space-evenly</p>
+    <p>align-items: (vertical) stretch, flex-start, flex-end, center</p>
+    <p>align-content: if elements are broken into at least 2 rows, vertical positions</p>
+    <p>stretch, flex-start, flex-end, center, space-around, space-between, space-evenly</p>
+    <br>
+    <p>order: on flex elements ...</p>
+    <p>flex-grow: Meghatározza, hogy a flex gyermek elem, a többihez képest mennyivel növekedhet meg</p>
+    <p>flex-shrink: Meghatározza, hogy a flex gyermek elem mérete, a többiekéhez képest mennyivel csökkenhet.</p>
+    <p>flex-basis: Meghatározza, a flex gyermek elem kezdő méretét.</p>
+    <p>flex: A flex property egy shorthand, a flex-grow flex-shrink és a flex-basis számára.</p>
+    <p> align-self: A flex gyermekelem, saját magára nézve megadott igazítási paramétere, amely felülírja a flex szülő elem által esetlegesen definiált igazítási szabályt.</p>
+    <h4>flex-wrap: wrap, align-content: flex-end</h4>
+    <div class="flexContainer">
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+        <div class="flexelement"></div>
+    </div>
+    <p> order, flex-grow, flex-basis</p>
+    <div class="flexContainer">
+        <div class="flexelement" style="flex-basis:300px">1</div>
+        <div class="flexelement" style="order: 2; flex-grow: 2;">2</div>
+        <div class="flexelement">3</div>
+        <div class="flexelement">4</div>
+        <div class="flexelement">5</div>
+        <div class="flexelement" style="order: 1; flex-shrink: 0;">6</div>
+    </div>
+
+</body>
+</html>
