@@ -1,0 +1,125 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    padding-left: 20px;
+    height: 6rem;
+    background: rgb(32, 32, 68);
+    font-size: 2rem;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav {
+    height: 3rem;
+}
+
+nav > ul {
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 20px;
+    height: 100%;
+    align-items: center;
+    list-style-type: none;
+    background: rgb(69, 69, 109);
+}
+
+nav > ul > li > a {
+    display: block;
+    margin-right: 5px;
+    padding: 0.4rem;
+    text-align: center;
+    background: rgb(32, 32, 68);
+    text-decoration: none;
+    color: white;
+    min-width: 120px;
+}
+
+nav > ul > li > a:hover {
+    background: rgb(41, 41, 87);
+}
+
+.container{
+    display: flex;
+    min-height: calc(100% - 12rem);
+}
+
+.container > aside {
+    width: 200px;
+    background: rgb(183, 183, 218);
+}
+
+.container > aside > ul{
+    list-style-type: none;
+}
+
+.container > aside > ul a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 0;
+}
+
+.container > aside > ul a:hover{
+    text-decoration: underline;
+}
+
+.container > main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer{
+    background: rgb(13, 13, 27);
+    color:rgb(147, 147, 226);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 576px) {
+    .container {
+        flex-direction: column;
+    }
+    .container > aside {
+        width: 100%;
+        order: 2;
+    }
+
+    nav {
+        height: auto;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        background: red;
+        height: auto;
+        padding-left: 0;
+    }
+
+    nav > ul > li {
+        width: 100%;
+    }
+
+    nav > ul > li > a {
+        width: 100%;
+        background: rgb(69, 69, 109);
+    }
+
+    nav > ul > li:not(:last-child) > a {
+        border-bottom: 1px solid rgb(32, 32, 68);
+    }
+
+}
