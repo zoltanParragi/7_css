@@ -104,7 +104,6 @@ footer{
 
     nav > ul {
         flex-direction: column;
-        background: red;
         height: auto;
         padding-left: 0;
     }
